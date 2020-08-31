@@ -14,7 +14,7 @@ public class DataBaseAuthService implements AuthService {
 
     @Override
     public Record findRecord(String login, String password) throws RuntimeException {
-        String sql = "SELECT name FROM USERS where login = ? and password = ?";
+        String sql = "SELECT id, name FROM USERS where login = ? and password = ?";
 
         try (PreparedStatement statement = connection.prepareStatement(sql)){
             statement.setString(1, login);
