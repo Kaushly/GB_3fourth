@@ -14,13 +14,17 @@ public class Box<T extends Fruits> {
 
     public float getWeight() {
         float weight = 0.0f;
-        for (T fruit : box) {
-            weight += fruit.getWeight();
+//        for (T fruit : box) {
+//            weight += fruit.getWeight();
+//        }
+        if (box.size() > 0) {
+
+            weight = box.size() * box.get(0).getWeight();
         }
         return weight;
     }
 
-    public boolean compare(Box anotherBox) {
+    public boolean compare(Box<? extends Fruits> anotherBox) {
         return getWeight() == anotherBox.getWeight();
     }
 
