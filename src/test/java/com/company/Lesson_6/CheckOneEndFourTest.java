@@ -6,12 +6,12 @@ import org.junit.Test;
 public class CheckOneEndFourTest {
 
     @Test
-    void shouldArrayOnlyOneEndFour() {
+    public void shouldArrayOnlyOneEndFour() {
         Assert.assertTrue("Error: array not only one end four", CheckOneEndFour.oneEndFour(new int[]{1, 4}));
     }
 
     @Test
-    void shouldArrayNotJustOneEndFour() {
+    public void shouldArrayNotJustOneEndFour() {
         Assert.assertTrue("Error: array not only one end four", CheckOneEndFour.oneEndFour(new int[]{1, 2, 4}));
     }
 }

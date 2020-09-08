@@ -12,7 +12,8 @@ public class SearchFour {
                     list[k] = array[j];
                 }
                 break;
-            }else {
+            }
+            if(i ==0){
                 throw new RuntimeException("No number four in the array");
             }
         }
